@@ -118,22 +118,111 @@
 
 
 
-def binary_search_recursive(arr, target, low, high):
-    if low > high:  # base case: not found
-        return -1
+# def binary_search_recursive(arr, target, low, high):
+#     if low > high:  # base case: not found
+#         return -1
 
-    mid = (low + high) // 2   
+#     mid = (low + high) // 2   
+#         return mid
+#     elif arr[mid] < target:
+#         return binary_search_recur
 
-    if arr[mid] == target:
-        return mid
-    elif arr[mid] < target:
-        return binary_search_recursive(arr, target, mid + 1, high)
-    elif arr[mid] > target:
-        return binary_search_recursive(arr, target, low, mid - 1)
+#     if arr[mid] == target:
+#         return mid
+#     elif arr[mid] < target:
+#         return binary_search_recursive(arr, target, mid + 1, high)
+#     elif arr[mid] > target:
+#         return binary_search_recursive(arr, target, low, mid - 1)
 
 
-# Example
-    #  0   1   2   3   4   5   6 
-arr = [5, 10, 15, 20, 25, 30, 35]
-target = 35
-print("Index:", binary_search_recursive(arr, target, 0, len(arr)-1))
+# # Example
+#     #  0   1   2   3   4   5   6 
+# arr = [5, 10, 15, 20, 25, 30, 35]
+# target = 35
+# print("Index:", binary_search_recursive(arr, target, 0, len(arr)-1))
+
+# Write a function to perform linear search in an array.
+# Input: arr = [5, 10, 15, 20, 25], key = 20
+# Output: 3 (index of 20)
+
+
+
+# def linear_search(arr, key):
+#     for i in range(0, len(arr)):  
+#         if key == arr[i]:
+#             return i 
+#     return -1
+
+# arr = [5, 10, 15, 20, 25]
+# key = 20
+
+# print(f"index: {linear_search(arr, key)}")
+
+# Use binary search (iterative) to find the index of 42 in:
+# arr = [10, 22, 30, 35, 40, 42, 55, 60]
+# Output: 5
+
+# def BinarySearch(arr,key):
+#         low = 0
+#         high = len(arr) -1 
+#         while low <= high:
+                
+#                 mid = (low + high) // 2 
+
+#                 if arr [mid] == key :
+#                         return mid 
+#                 elif arr [mid] < key :
+#                         low = mid + 1
+#                 elif arr [mid] > key :
+#                         high = mid - 1
+#         return -1 
+
+# arr = [10, 22, 30, 35, 40, 42, 55, 60] 
+
+# key = 42 
+
+# print(f"Index {BinarySearch(arr,key)}")
+
+
+
+# Given a sorted list of strings, use binary search (recursive) to find the word "dog".
+# arr = ["ant", "bat", "cat", "dog", "elephant", "fox"]
+# Output: 3
+
+# def BinarySearch(arr,key):
+#         low = 0
+#         high = len(arr) -1 
+#         while low <= high:
+                
+#                 mid = (low + high) // 2 
+
+#                 if arr [mid] == key :
+#                         return mid 
+#                 elif arr [mid] < key :
+#                         low = mid + 1
+#                 elif arr [mid] > key :
+#                         high = mid - 1
+#         return -1 
+
+
+# arr = ["ant", "bat", "cat", "dog", "elephant", "fox"]
+
+# key = "dog" 
+
+# print(f"Index {BinarySearch(arr,key)}")
+
+# ------------------------------------------------------------------------------------------
+
+# Example: arr = [1, 5, 7, 5, 9, 5], key = 5
+# Output: [1, 3, 5]
+
+def linear_search(arr, key):
+    a = [] 
+    for i in range(0, len(arr)):  
+        if key == arr[i]:
+            a.append(i) 
+    return a
+
+arr = [1, 5, 7, 5, 9, 5]
+key = 5
+print(f"index: {linear_search(arr, key)}")
