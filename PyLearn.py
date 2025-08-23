@@ -37,8 +37,6 @@
 # print 
 # Elements row by row
 
-
-
 # # print by Colum
 # array = [[1,2,3],[4,5,6],[7,8,9]]
 
@@ -90,7 +88,6 @@
 
 # Learn how broadcasting works.
 
-
 #                    WITHOUT RECURSION
 # def binary_search_iterative(arr, target):
 #     low = 0
@@ -115,8 +112,6 @@
 # arr = [5, 10, 15, 20, 25, 30, 35]
 # target = 12
 # print("Index:", binary_search_iterative(arr, target))
-
-
 
 # def binary_search_recursive(arr, target, low, high):
 #     if low > high:  # base case: not found
@@ -144,8 +139,6 @@
 # Write a function to perform linear search in an array.
 # Input: arr = [5, 10, 15, 20, 25], key = 20
 # Output: 3 (index of 20)
-
-
 
 # def linear_search(arr, key):
 #     for i in range(0, len(arr)):  
@@ -182,8 +175,6 @@
 # key = 42 
 
 # print(f"Index {BinarySearch(arr,key)}")
-
-
 
 # Given a sorted list of strings, use binary search (recursive) to find the word "dog".
 # arr = ["ant", "bat", "cat", "dog", "elephant", "fox"]
@@ -251,4 +242,4 @@
 
 # arr = [2, 4, 4, 4, 6, 8]
 # key = 4
-# print(f"First occurrence of {key}: {find_first_occurrence(arr, key)}") 
+# print(f"First occurrence of {key}: {find_first_occurrence(arr, key)}")
