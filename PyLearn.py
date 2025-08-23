@@ -243,3 +243,47 @@
 # arr = [2, 4, 4, 4, 6, 8]
 # key = 4
 # print(f"First occurrence of {key}: {find_first_occurrence(arr, key)}")
+
+# You are asked to build a simple simulator of the Magic 8 Ball toy. The user types a Yes/No question (like "Will I become good at Python?"), 
+# and the program gives a random response from a fixed set of answers.
+
+# import random
+# question = input("What is Your Question, \nExample of a question:Will I become good at Python? \n")
+
+# answer =["Yes", "No", "Maybe", "ahhh!idk,Probbaly nooo"]
+
+# Output = random.choice(answer)
+
+# if len(question) > 5 :
+#     print(Output)
+# else: print("Ask a Proper Question")
+
+# Coin Toss Game 🪙
+
+# Computer flips coin → Heads or Tails.
+
+# User guesses before flip.
+
+# import random
+
+# userguess = input("Pick 1 or 2 ;  1.Heads or 2.Tails: ")
+# UserGuess = userguess.strip().capitalize()
+
+# choices = {1: "Heads", 2: "Tails"}
+# CPU_choice = random.choice(list(choices.values()))
+
+# # Convert user input to match the format
+# if UserGuess == "1":
+#     user_choice = "Heads"
+# elif UserGuess == "2":
+#     user_choice = "Tails"
+# else:
+#     user_choice = UserGuess  # if user typed "Heads" or "Tails" directly
+
+# if CPU_choice == user_choice:
+#     print("You won!")
+# else:
+#     print("You lose!")
+
+# print(f"Your call: {user_choice}, and it is: {CPU_choice}")
+
