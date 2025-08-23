@@ -76,6 +76,64 @@
 #     sum += i 
 # print(sum)
 
-arr = [10, 20, 30, 40, 30, 50]
+# arr = [10, 20, 30, 40, 30, 50]
 
-[print(i) for i in arr] 
+# [print(i) for i in arr] 
+
+# ---------------------------------------------------------------------------
+
+# Matrix Calculator
+
+# Take two matrices from the user.
+
+# Perform addition, subtraction, multiplication, transpose.
+
+# Learn how broadcasting works.
+
+
+#                    WITHOUT RECURSION
+# def binary_search_iterative(arr, target):
+#     low = 0
+#     high = len(arr) - 1
+#     print(len(arr)) # 7
+
+#     while low <= high:     
+#         mid = (low + high) // 2   
+
+#         if arr[mid] == target:
+#             return mid   
+#         elif arr[mid] < target:
+#             low = mid + 1   
+#         else:
+#             high = mid - 1  
+
+#     return -1  
+
+
+# # Example
+#     #  0   1   2   3   4   5   6 
+# arr = [5, 10, 15, 20, 25, 30, 35]
+# target = 12
+# print("Index:", binary_search_iterative(arr, target))
+
+
+
+def binary_search_recursive(arr, target, low, high):
+    if low > high:  # base case: not found
+        return -1
+
+    mid = (low + high) // 2   
+
+    if arr[mid] == target:
+        return mid
+    elif arr[mid] < target:
+        return binary_search_recursive(arr, target, mid + 1, high)
+    elif arr[mid] > target:
+        return binary_search_recursive(arr, target, low, mid - 1)
+
+
+# Example
+    #  0   1   2   3   4   5   6 
+arr = [5, 10, 15, 20, 25, 30, 35]
+target = 35
+print("Index:", binary_search_recursive(arr, target, 0, len(arr)-1))
