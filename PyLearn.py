@@ -216,13 +216,39 @@
 # Example: arr = [1, 5, 7, 5, 9, 5], key = 5
 # Output: [1, 3, 5]
 
-def linear_search(arr, key):
-    a = [] 
-    for i in range(0, len(arr)):  
-        if key == arr[i]:
-            a.append(i) 
-    return a
+# def linear_search(arr, key):
+#     a = [] 
+#     for i in range(0, len(arr)):  
+#         if key == arr[i]:
+#             a.append(i) 
+#     return a
 
-arr = [1, 5, 7, 5, 9, 5]
-key = 5
-print(f"index: {linear_search(arr, key)}")
+# arr = [1, 5, 7, 5, 9, 5]
+# key = 5
+# print(f"index: {linear_search(arr, key)}")
+
+#Modify binary search to return the first occurrence of a number in a sorted array with duplicates.
+#Example: arr = [2, 4, 4, 4, 6, 8], key = 4
+# Output: 1
+
+# def find_first_occurrence(arr, key):
+#     low = 0
+#     high = len(arr) - 1
+#     result = -1  
+    
+#     while low <= high:
+#         mid = (low + high) // 2
+        
+#         if arr[mid] == key:
+#             result = mid  
+#             high = mid - 1  
+#         elif arr[mid] < key:
+#             low = mid + 1
+#         else:  
+#             high = mid - 1
+    
+#     return result
+
+# arr = [2, 4, 4, 4, 6, 8]
+# key = 4
+# print(f"First occurrence of {key}: {find_first_occurrence(arr, key)}") 
