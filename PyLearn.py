@@ -287,3 +287,84 @@
 
 # print(f"Your call: {user_choice}, and it is: {CPU_choice}")
 
+#---------------------------------------------------------------------------------------------# 
+#find max from unsorted list
+
+# a = [1, 4, 7, 12, 6, 8]
+
+# max_val = a[0]  
+
+# for i in range(1, len(a)):
+#     if a[i] > max_val:
+#         max_val = a[i]
+
+# print(max_val)
+
+#find min from unsorted list
+# a = [1, 4, 7, 12, 6, 8]
+
+# min = a[0]
+
+# for i in range(0,len(a)):
+#     if a[i] <= min:
+#         min = a[i]
+    
+# print(min)
+
+#find sum of all elemsts in a unsorted list
+
+# a = [1, 4, 7, 12, 6, 8]
+
+# sum = 0
+
+# for i in range(0,len(a)):
+#     sum += a[i]
+
+# print(sum)
+
+# Avg of all elements in a unsorted list
+
+# a = [1, 4, 7, 12, 6, 8]
+
+# sum = 0
+
+# for i in range(0,len(a)):
+#         sum += a[i]
+
+# avg = sum / 2
+
+# print(avg)
+# --------------------------------------------------------------------------------#
+# Count Vowels in a Word 📝
+# Input: "python"
+# Output: 1.
+# Input: "education"
+# Output: 5.
+
+# Vowels = ["a","e","i","o","u"]
+# word = []
+# word = input("Enter Your Word: ")
+# word = word.lower()
+
+# count = 0
+# for i in word:
+#     for v in Vowels:
+#         if i == v:
+#             count += 1
+
+# print(f"Your Word has {count} Vowels in It")
+#------------------------------------------------------------------_________________________#
+# #Factorial Calculator ✖️
+# Input: 5
+# Output: 120 (5*4*3*2*1).
+
+number = int(input("Enter your number for factorial: "))
+
+
+factorial = 1
+
+
+for i in range(1, number + 1):
+    factorial *= i
+
+print(f"The factorial of {number} is {factorial}")
