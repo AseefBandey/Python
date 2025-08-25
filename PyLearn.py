@@ -358,13 +358,70 @@
 # Input: 5
 # Output: 120 (5*4*3*2*1).
 
-number = int(input("Enter your number for factorial: "))
+# number = int(input("Enter your number for factorial: "))
 
 
-factorial = 1
+# factorial = 1
 
 
-for i in range(1, number + 1):
-    factorial *= i
+# for i in range(1, number + 1):
+#     factorial *= i
 
-print(f"The factorial of {number} is {factorial}")
+# print(f"The factorial of {number} is {factorial}")
+
+#Reverse array 
+
+# arr = [1, 2, 3, 4, 6, 8]
+# brr = []
+
+
+# for i in range(len(arr)-1, -1, -1):
+#     brr.append(arr[i])
+
+# print(brr)  
+
+#Enter a number in a sorted list
+
+# arr = [2,4,6,12,18,22]
+# num = 8
+
+
+# for i in range(len(arr)):
+#     if num < arr[i]:
+#         arr.insert(i, num)
+#         break
+# else:
+#     arr.append(num)  
+
+# print(arr) 
+
+# Check if list is sorted 
+
+
+# arr = [1, 4, 5, 3, 2]
+
+# for i in range(0, len(arr) - 1):  # Note: -1 here!
+#     if arr[i] > arr[i + 1]:
+#         print("Not sorted")
+#         break
+# else:
+#     print("Sorted")  
+
+# -ve on left side +ve on right side
+
+# arr = [-1,2,4,6,-2,-4,5,-3]
+
+
+# negative = []
+# positive = []
+# final_Array = []
+
+# for i in range(0 ,len(arr)):
+#     if arr[i] < 0 :
+#         negative.append(arr[i])
+#     else : 
+#         positive.append(arr[i])
+
+# final_Array = negative + positive
+
+# print(final_Array)
