@@ -379,6 +379,7 @@
 #     brr.append(arr[i])
 
 # print(brr)  
+# ---------------------------------------------------------------#
 
 #Enter a number in a sorted list
 
@@ -394,6 +395,7 @@
 #     arr.append(num)  
 
 # print(arr) 
+# --------------------------------------------------------------#
 
 # Check if list is sorted 
 
@@ -406,6 +408,8 @@
 #         break
 # else:
 #     print("Sorted")  
+
+#-----------------------------------------------------------------------------------#
 
 # -ve on left side +ve on right side
 
@@ -425,3 +429,108 @@
 # final_Array = negative + positive
 
 # print(final_Array)
+
+# --------------------------------------------------------------------------#
+
+# Second Largest Number in List
+
+# Input: [10, 20, 4, 45, 99]
+
+# Output: 45.
+# (Without using sorted() directly — try loops!)
+
+# arr = [10, 20, 4, 45, 99]
+# n = len(arr)
+
+# # Bubble sort to sort the array
+# for i in range(n):
+#     for j in range(0, n-i-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j], arr[j+1] = arr[j+1], arr[j]
+
+# print("Sorted array:", arr)  # [4, 10, 20, 45, 99]
+
+# # Second largest is the second last element
+# second_largest = arr[-2]
+# print("Second largest number:", second_largest)  # Output: 45
+
+#------------------------------------------------------------------------------------------------#
+
+# Write a program to insert an element at the end of a list.
+# Example: [1,2,3], insert 4 → [1,2,3,4].
+
+# arr = [1,2,3]
+
+# arr.append(4)
+
+# print(arr)
+
+#----------------------------------------------#
+
+# Delete an element from a list by value.
+# Example: [10,20,30], delete 20 → [10,30].
+
+
+# arr = [10,20,30] 
+
+# arr.remove(20)
+
+# print(arr)
+
+#-----------------------------------------------------#
+
+# Find the sum of all elements in an array without using sum().
+
+# arr =[1,3,5,7,12,3]
+
+# sum = 0
+
+# for i in arr:
+#     sum += i 
+
+# print(sum) 
+
+
+# ----------------------------------------------------------- #
+
+# Write a program to reverse a list using a loop (not [::-1]).
+
+# listt = ["D","O","G"]
+
+# newlist = []
+# n = len(listt) 
+# for i in range(n-1 ,-1, -1):
+#     newlist.append(listt[i])
+
+# result = ' '.join(newlist)
+# print(result)
+
+#-------------------------------------------------------------------------------_#
+
+# Implement Linear Search:
+
+# Input: [10, 30, 50, 70], search 50.
+
+# Output: Found at index 2.
+
+# If not found, print "Not found".
+
+# arr = [10, 30, 50, 70]
+# target = 50
+# n = len(arr)
+# found = False
+
+# i = 0
+# while i < n:
+#     if arr[i] == target:
+#         print(f"Found at index {i}")
+#         found = True
+#         break  
+#     i += 1  
+
+# if not found:
+#     print("Not found")
+
+
+    
+
