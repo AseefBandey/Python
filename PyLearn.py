@@ -531,6 +531,71 @@
 # if not found:
 #     print("Not found")
 
+#----------------------------------------------------------------------------------__#
 
+# Example 1:
+# Input: nums = [2,7,11,15], target = 9
+# Output: [0,1]
+# Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+# Example 2:
+
+# Input: nums = [3,2,4], target = 6
+# Output: [1,2]
+
+# Example 3:
+
+# Input: nums = [3,3], target = 6
+# Output: [0,1]
+
+# class Solution:
+#     def twoSum(self, nums, target):
+#         n = len(nums)
+#         for i in range(n):
+#             for j in range(i + 1, n):
+#                 if nums[i] + nums[j] == target:
+#                     return [i, j]  
+#         return []  
+
+
+# nums = [2, 7, 11, 15]
+# target = 9
+# solution = Solution()
+# result = solution.twoSum(nums, target)
+# print(result)  
+                    
+#Example 1:
+
+# Input: nums = [1,1,2]
+# Output: 2, nums = [1,2,_]
+# Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+# It does not matter what you leave beyond the returned k (hence they are underscores).
+
+# Example 2:
+
+# Input: nums = [0,0,1,1,1,2,2,3,3,4]
+# Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+# Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+# It does not matter what you leave beyond the returned k (hence they are underscores).
+
+
+# class Solution(object):
+#     def removeDuplicates(self, nums):
+#         n = len(nums)
+#         j = 1
+#         for i in range(1,n):
+#                 if nums[i] != nums[i-1]:
+#                    nums[j] = nums[i]
+#                    j += 1
+        
+#         return j
     
 
+# nums = [0,0,1,1,1,2,2,3,3,4]
+
+# solution = Solution()
+# result = solution.removeDuplicates(nums)
+# print(result) 
+                
+
+        
