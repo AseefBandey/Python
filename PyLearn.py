@@ -648,4 +648,91 @@
 # solution = Solution()
 # result = solution.maxProfit(prices)
 # print(result) 
+
+#------------------------------------------------------------------------------------------#
+
+# Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+
+
+# Example 1:
+
+# Input: nums = [1,2,3,4,5,6,7], k = 3
+# Output: [5,6,7,1,2,3,4]
+# Explanation:
+# rotate 1 steps to the right: [7,1,2,3,4,5,6]
+# rotate 2 steps to the right: [6,7,1,2,3,4,5]
+# rotate 3 steps to the right: [5,6,7,1,2,3,4]
+
+# Example 2:
+
+# Input: nums = [-1,-100,3,99], k = 2
+# Output: [3,99,-1,-100]
+# Explanation: 
+# rotate 1 steps to the right: [99,-1,-100,3]
+# rotate 2 steps to the right: [3,99,-1,-100]
+
+# class Solution(object):
+#     def rotate(self, nums, k):
+#         n = len(nums)
+#         k = k % n  
+
+#          # here if K = nums.insert(0, x) is O(n) (because shifting all elements to the right).
+
+#             # nums.pop(-1) is O(1).
+
+#             # So each loop = O(n).
+
+#             # Total = O(n × k).
+
+#             # n (length of nums) can be up to 100,000.
+
+#              # k can also be up to 100,000.
+
+#             # Worst case = 100,000 × 100,000 = 10^10 operations → far too slow, time limit exceeded
+#         # for i in range(k):
+#         #     nums.insert(0, nums[-1])
+#         #     nums.pop(-1)
+#         # print(nums)
+#         temp = nums[-k:]      
+#         rest = nums[:-k]       
+#         nums[:] = temp + rest 
+
+#         print(nums)
+            
+                
+# nums = [-1,-100,3,99]
+# k = 2
+# solution = Solution()
+# solution.rotate(nums,k)
+
+#------------------------------------------------------------------------------------------#
+#                                        Contains Duplicate
+#Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+# Example 1:
+
+# Input: nums = [1,2,3,1]
+
+# Output: true
+
+# Explanation:
+
+# The element 1 occurs at the indices 0 and 3.
+
+
+# class Solution(object):
+#     def containsDuplicate(self, nums):
+#         nums.sort() #for large array's
+#         for i in range(1, len(nums)):
+#             if nums[i] == nums[i-1]:
+#                 return True
+#         return False
+
+                
+       
+
+# nums = [1,2,3,4]
+# solution = Solution()
+# results=solution.containsDuplicate(nums)
+# print(results)
+
         
