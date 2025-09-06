@@ -736,3 +736,36 @@
 # print(results)
 
         
+#------------------------------------------------------------------------------------------#
+#                                       Single Number
+#Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+# #Example 1:
+
+# Input: nums = [2,2,1]
+
+# Output: 1
+
+# Example 2:
+
+# Input: nums = [4,1,2,1,2]
+
+# Output: 4
+
+# class Solution(object):
+#     def singleNumber(self, nums):
+#         nums.sort()
+#         n = len(nums)
+#         i = 0
+        
+#         while i < n - 1:     
+#             if nums[i] != nums[i+1]:
+#                 return nums[i]
+#             i += 2           
+        
+#         return nums[-1]      
+        
+
+# nums =  [2,2,1]
+# solution = Solution()
+# print(solution.singleNumber(nums))  
