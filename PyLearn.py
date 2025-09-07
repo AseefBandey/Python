@@ -787,7 +787,13 @@
 #                     nums2.pop(j)
 #                     break
                      
-
+        
+#         return intersection
+        
+# nums1 = [4,9,5]
+# nums2 = [9,4,9,8,4]
+# solution = Solution()
+# print(solution.intersect(nums1,nums2))  
                   
 
    
