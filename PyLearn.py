@@ -779,5 +779,21 @@
 #     def intersect(self, nums1, nums2):
 #         intersection = []
        
+#         for i in range(0,len(nums1)):
+#             for j in range(0,len(nums2)):
+                
+#                 if nums1[i] == nums2[j]:
+                    
+#                     intersection.append(nums1[i]) 
+#                     nums2.pop(j)
+#                     break
+                     
 
+        
+#         return intersection
+        
+# nums1 = [4,9,5]
+# nums2 = [9,4,9,8,4]
+# solution = Solution()
+# print(solution.intersect(nums1,nums2))   
    
