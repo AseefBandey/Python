@@ -784,5 +784,10 @@
 #                 if nums1[i] == nums2[j]:
                     
 #                     intersection.append(nums1[i]) 
+#                     nums2.pop(j)
+#                     break
+                     
+
+                  
 
    
