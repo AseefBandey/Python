@@ -845,14 +845,14 @@
 #                 j += 1
 
 #         # fill remaining with zeros
-#         for k in range(j, len(nums)):
-#             nums[k] = 0
+        for k in range(j, len(nums)):
+            nums[k] = 0
 
-#         return nums
+        return nums
 
-# nums = [0,0,1]
-# solution = Solution()
-# print(solution.moveZeroes(nums))  # [1,3,12,0,0]
+nums = [0,0,1]
+solution = Solution()
+print(solution.moveZeroes(nums))  # [1,3,12,0,0]
 
 
 
