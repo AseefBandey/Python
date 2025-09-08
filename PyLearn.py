@@ -852,7 +852,7 @@
 
 # nums = [0,0,1]
 # solution = Solution()
-print(solution.moveZeroes(nums))  # [1,3,12,0,0]
+# print(solution.moveZeroes(nums))  # [1,3,12,0,0]
 
 
 
