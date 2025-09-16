@@ -955,3 +955,17 @@
 
 # for i in range(n,0,-1):
 #       print("*" * i )
+
+# Input Format: N = 3
+# Result: 
+# 1 2 3
+# 1 2
+# 1
+
+n = input("Give N: ")
+n = int(n)
+
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        print(j, end="")
+    print()
