@@ -881,8 +881,24 @@
 #             maxSub = max(maxSub, curSum)
 #         return maxSub
 
+   
+#                          Pattern
+# Example 1:
+# Input: N = 3
+# Output: 
+# * * *
+# * * *
+# * * *
 
+m = input("Give n: ")
+m = int(m)
 
+for i in range(m):
+    for j in range(m):
+        print("*", end="")  # Print star without newline
+    print()  # Print newline after each row
+
+       
 
 
 
