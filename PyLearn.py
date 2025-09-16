@@ -906,16 +906,37 @@
 # * * *
        
 
+# n = input("Give N: ")
+# n = int(n)
+
+# for i in range(1,n+1):
+#       print("*" * i )
+
+# Input Format: N = 3
+# Result: 
+# 1
+# 1 2 
+# 1 2 3
+
+
+# n = input("Give N: ")
+# n = int(n)
+# for i in range(1, n+1):
+#     for j in range(1, i+1):  # Change: j goes from 1 to i+1
+#         print(j, end=" ")     # Added space for better formatting
+#     print()
+
+# Input Format: N = 6
+# Result:
+# 1
+# 2 2
+# 3 3 3
+# 4 4 4 4
+# 5 5 5 5 5
+# 6 6 6 6 6 6
+
+
 n = input("Give N: ")
 n = int(n)
-
-for i in range(1,n+1):
-      print("*" * i )
-
-
-
-
-
-
 
 
