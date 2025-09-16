@@ -890,16 +890,27 @@
 # * * *
 # * * *
 
-m = input("Give n: ")
-m = int(m)
+# m = input("Give n: ")
+# m = int(m)
 
-for i in range(m):
-    for j in range(m):
-        print("*", end="")  # Print star without newline
-    print()  # Print newline after each row
+# for i in range(m):
+#     for j in range(m):
+#         print("*", end="")  # Print star without newline
+#     print()  # Print newline after each row
 
+
+# Input Format: N = 3
+# Result: 
+# * 
+# * * 
+# * * *
        
 
+n = input("Give N: ")
+n = int(n)
+
+for i in range(1,n+1):
+      print("*" * i )
 
 
 
