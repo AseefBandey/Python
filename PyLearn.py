@@ -936,10 +936,22 @@
 # 6 6 6 6 6 6
 
 
-n = input("Give N: ")
-n = int(n)
+# n = input("Give N: ")
+# n = int(n)
 
-for i in range(1,n+1):
-    print(f"{i}" * i)
+# for i in range(1,n+1):
+#     print(f"{i}" * i)
 
 
+# Input Format: N = 3
+# Result: 
+# * * *
+# * * 
+# *
+
+
+# n = input("Give N: ")
+# n = int(n)
+
+# for i in range(n,0,-1):
+#       print("*" * i )
