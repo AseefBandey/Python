@@ -1128,19 +1128,19 @@ for i in num:
 max_freq = 0
 max_element = 0
 
-for j in range(len(h)):
-    if h[j] > max_freq:
-        max_freq = h[j]
-        max_element = j
+# for j in range(len(h)):
+#     if h[j] > max_freq:
+#         max_freq = h[j]
+#         max_element = j
 
 
-min_freq = max(h) + 1  
-min_element = 0
+# min_freq = max(h) + 1  
+# min_element = 0
 
-for k in range(len(h)):
-    if h[k] > 0 and h[k] < min_freq:  
-        min_freq = h[k]
-        min_element = k
+# for k in range(len(h)):
+#     if h[k] > 0 and h[k] < min_freq:  
+#         min_freq = h[k]
+#         min_element = k
 
-print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
-print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
+# print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
+# print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
