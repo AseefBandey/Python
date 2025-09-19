@@ -1038,15 +1038,15 @@
 # Print 1 to N using Recursion
 
 
-def recursion(x,n):
-        if x <=n:
-            print(x)
-            recursion(x+1,n)
-        else: return
+# def recursion(x,n):
+#         if x <=n:
+#             print(x)
+#             recursion(x+1,n)
+#         else: return
 
-n = int(input("What's The Limit: "))
-x = 1
-call = recursion(x,n)
+# n = int(input("What's The Limit: "))
+# x = 1
+# call = recursion(x,n)
 
 
 
