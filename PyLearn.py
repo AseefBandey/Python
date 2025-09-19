@@ -1116,31 +1116,31 @@
 # Find the highest/lowest frequency element  AZ dsa
 
 
-# num = [2,2,3,4,4,2]
+num = [2,2,3,4,4,2]
 
-# max_val = max(num)
-# h = [0] * (max_val + 1)
-
-
-# for i in num:
-#     h[i] += 1
-
-# max_freq = 0
-# max_element = 0
-
-# for j in range(len(h)):
-#     if h[j] > max_freq:
-#         max_freq = h[j]
-#         max_element = j
+max_val = max(num)
+h = [0] * (max_val + 1)
 
 
-# min_freq = max(h) + 1  
-# min_element = 0
+for i in num:
+    h[i] += 1
 
-# for k in range(len(h)):
-#     if h[k] > 0 and h[k] < min_freq:  
-#         min_freq = h[k]
-#         min_element = k
+max_freq = 0
+max_element = 0
 
-# print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
-# print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
+for j in range(len(h)):
+    if h[j] > max_freq:
+        max_freq = h[j]
+        max_element = j
+
+
+min_freq = max(h) + 1  
+min_element = 0
+
+for k in range(len(h)):
+    if h[k] > 0 and h[k] < min_freq:  
+        min_freq = h[k]
+        min_element = k
+
+print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
+print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
