@@ -1050,21 +1050,21 @@
 
 # Hashing
 
-arr = [1,2,5,6,3,2,2,1]
-length=len(arr)
+# arr = [1,2,5,6,3,2,2,1]
+# length=len(arr)
 
-max_val = max(arr)
-hash_1 = [0] * (max_val + 1) 
+# max_val = max(arr)
+# hash_1 = [0] * (max_val + 1) 
 
-for i in arr:
-    hash_1[i] +=1
+# for i in arr:
+#     hash_1[i] +=1
 
-print(arr)
-n = int(input("Enter Which Number you want to see!: "))
+# print(arr)
+# n = int(input("Enter Which Number you want to see!: "))
 
-if n in arr:
-    print(hash_1[n])
-else:print("Number not present in list")
+# if n in arr:
+#     print(hash_1[n])
+# else:print("Number not present in list")
 
 
 
