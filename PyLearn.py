@@ -1084,5 +1084,31 @@
 # else: print("The Character Not Present in List")
 
 
+# Count frequency of each element in the array  [AzDsa]
 
- 
+# Example 1:
+# Input: arr[] = {10,5,10,15,10,5};
+# Output: 10 3 
+#         5  2 
+#         15 1
+
+# Explanation: 10 occurs 3 times in the array
+# 	      5 occurs 2 times in the array
+#               15 occurs 1 time in the array
+
+
+num = [2,2,3,4,4,2]
+
+
+max_val = max(num)
+h = [0] * (max_val + 1)
+
+for i in num:
+    h[i] +=1
+
+
+for j in range(0,len(h)):
+    if h[j] == 0:
+        continue
+    else: print(f"{j} {h[j]}")
+
