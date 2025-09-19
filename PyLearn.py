@@ -1014,26 +1014,27 @@
 # *****  
 #  ***
 
-n = int(input("Enter number of rows: "))
+# n = int(input("Enter number of rows: "))
 
-for i in range(1, n+1):
-    if i <= n:
-        # Print leading spaces
-        spaces = n - i
-        print(" " * spaces, end="")
+# for i in range(1, n+1):
+#     if i <= n:
+#         # Print leading spaces
+#         spaces = n - i
+#         print(" " * spaces, end="")
         
-        # Print stars
-        stars = 2 * i - 1
-        print("*" * stars)
-else :
-    for i in range(n,0,-1):
-        spaces = n - i
-        print(" " * spaces, end="")
+#         # Print stars
+#         stars = 2 * i - 1
+#         print("*" * stars)
+# else :
+#     for i in range(n,0,-1):
+#         spaces = n - i
+#         print(" " * spaces, end="")
 
 
-        # Print stars
-        stars = 2 * i - 1
-        print("*" * stars)
+#         # Print stars
+#         stars = 2 * i - 1
+#         print("*" * stars)
+
 
 
 
