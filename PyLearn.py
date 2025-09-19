@@ -1067,7 +1067,21 @@
 # else:print("Number not present in list")
 
 
+s = ['a','e','a','a','f','r','e','f']
 
+h = [0] * 26
+for i in s:
+    ascii_value = ord(i)
+    Index = ascii_value - 97 
+    h[Index] += 1
+print(s)
+n = input("Frequency of which Character: ")
+
+if n in s:
+    Value = ord(n)
+    Indexx = Value - 97
+    print(h[Indexx])
+else: print("The Character Not Present in List")
 
 
 
