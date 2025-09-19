@@ -1137,10 +1137,10 @@
 # min_freq = max(h) + 1  
 # min_element = 0
 
-for k in range(len(h)):
-    if h[k] > 0 and h[k] < min_freq:  
-        min_freq = h[k]
-        min_element = k
+# for k in range(len(h)):
+#     if h[k] > 0 and h[k] < min_freq:  
+#         min_freq = h[k]
+#         min_element = k
 
-print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
-print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
+# print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
+# print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
