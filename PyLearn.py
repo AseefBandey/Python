@@ -1097,18 +1097,18 @@
 #               15 occurs 1 time in the array
 
 
-num = [2,2,3,4,4,2]
+# num = [2,2,3,4,4,2]
 
 
-max_val = max(num)
-h = [0] * (max_val + 1)
+# max_val = max(num)
+# h = [0] * (max_val + 1)
 
-for i in num:
-    h[i] +=1
+# for i in num:
+#     h[i] +=1
 
 
-for j in range(0,len(h)):
-    if h[j] == 0:
-        continue
-    else: print(f"{j} {h[j]}")
+# for j in range(0,len(h)):
+#     if h[j] == 0:
+#         continue
+#     else: print(f"{j} {h[j]}")
 
