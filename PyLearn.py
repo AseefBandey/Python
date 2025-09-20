@@ -1144,3 +1144,24 @@
 
 # print(f"Highest Element: {max_element}, Highest Frequency: {max_freq}")
 # print(f"Lowest Element: {min_element}, Lowest Frequency: {min_freq}")
+
+# Selection Sort Algorithm A2Z DSA
+# Example 1:
+# Input: N = 6, array[] = {13,46,24,52,20,9}
+# Output: 9,13,20,24,46,52
+# Explanation: After sorting the array is: 9, 13, 20, 24, 46, 52
+
+# nums = [13,46,24,52,20,9]
+
+
+# for i in range(1,len(nums)):
+#     for j in range (0,len(nums)-1):
+#         if nums[i] < nums[j]:
+#             Temp = nums[j]
+#             nums[j] = nums[i]
+#             nums[i] = Temp
+# print(nums)
+
+
+
+
