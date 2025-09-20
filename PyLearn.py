@@ -1163,18 +1163,18 @@
 # print(nums)
 
 
-# Bubble Sort 
-#                        n = 6  , n -2 = 4
-#       0  1  2  3  4  5  
-# nums = [13,46,24,52,20,9]
+Bubble Sort 
+                       n = 6  , n -2 = 4
+      0  1  2  3  4  5  
+nums = [13,46,24,52,20,9]
 
-# n =len(nums)
-# for i in range(n-2,-1,-1):
-#     for j in range(0,i+1):
-#         if nums[j]>nums[j+1]:
-#             nums[j],nums[j+1] = nums[j+1],nums[j]
+n =len(nums)
+for i in range(n-2,-1,-1):
+    for j in range(0,i+1):
+        if nums[j]>nums[j+1]:
+            nums[j],nums[j+1] = nums[j+1],nums[j]
 
-# print(nums)
+print(nums)
         
             
 
