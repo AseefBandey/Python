@@ -40,6 +40,6 @@
 #     print(" " * spaces,end="")
 
 
-#     stars = 2 * i - 1
-#     print("*" * stars)
+    stars = 2 * i - 1
+    print("*" * stars)
 
