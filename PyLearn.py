@@ -1200,11 +1200,11 @@
     
 #     return nums
 
-# # Test with your example
-# nums = [13, 46, 24, 52, 20, 9]
-# print("Original:", nums)
-# result = insertion_sort(nums)
-# print("Sorted:", result)
+# Test with your example
+nums = [13, 46, 24, 52, 20, 9]
+print("Original:", nums)
+result = insertion_sort(nums)
+print("Sorted:", result)
 
 
 
