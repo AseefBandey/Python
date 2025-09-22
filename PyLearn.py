@@ -1182,29 +1182,29 @@
 # Input: N = 6, array[] = {13,46,24,52,20,9}
 # Output: 9,13,20,24,46,52
 
-def insertion_sort(nums):
-    n = len(nums)
+# def insertion_sort(nums):
+#     n = len(nums)
     
-    # Start from second element (index 1)
-    for i in range(1, n):
-        key = nums[i]  # Current element to be inserted
-        j = i - 1      # Last index of sorted portion
+#     # Start from second element (index 1)
+#     for i in range(1, n):
+#         key = nums[i]  # Current element to be inserted
+#         j = i - 1      # Last index of sorted portion
         
-        # Move elements greater than key one position right
-        while j >= 0 and nums[j] > key:
-            nums[j + 1] = nums[j]  # Shift right
-            j -= 1
+#         # Move elements greater than key one position right
+#         while j >= 0 and nums[j] > key:
+#             nums[j + 1] = nums[j]  # Shift right
+#             j -= 1
         
-        # Insert key at correct position
-        nums[j + 1] = key
+#         # Insert key at correct position
+#         nums[j + 1] = key
     
-    return nums
+#     return nums
 
-# Test with your example
-nums = [13, 46, 24, 52, 20, 9]
-print("Original:", nums)
-result = insertion_sort(nums)
-print("Sorted:", result)
+# # Test with your example
+# nums = [13, 46, 24, 52, 20, 9]
+# print("Original:", nums)
+# result = insertion_sort(nums)
+# print("Sorted:", result)
 
 
 
