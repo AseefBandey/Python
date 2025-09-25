@@ -1239,3 +1239,24 @@
 # mylist = [3, 7, 6, -10, 15, 23.5, 55, -13]
 # mysortedlist = mergeSort(mylist)
 # print("Sorted array:", mysortedlist) 
+
+
+# Bubble Sort  recursively
+def bubble_sort_recursive(nums, n=None):
+        n = len(nums)
+    
+    if n <= 1:
+        return nums
+       
+    swapped = False
+    for i in range(n-1):
+        if nums[i] > nums[i+1]:
+            nums[i], nums[i+1] = nums[i+1], nums[i]
+            swapped = True    
+    
+    return bubble_sort_recursive(nums, n-1)
+
+
+nums = [13,46,24,52,20,9]
+result = bubble_sort_recursive(nums)
+print(result) 
