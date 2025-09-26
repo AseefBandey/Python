@@ -1298,7 +1298,9 @@
 
 
 def Secondlargest(nums):
-
+    if len(nums) < 2:
+        return None 
+        
     n = len(nums)
     largest = float("-inf")
     Slargest = float("-inf")
