@@ -1297,6 +1297,21 @@
 # 	Second Largest : 5
 
 
+def Secondlargest(nums):
+
+    n = len(nums)
+    largest = float("-inf")
+    Slargest = float("-inf")
+    for i in range(0,n):
+        if nums[i] > largest:
+            Slargest = largest
+            largest = nums[i]
+        elif nums[i] > Slargest and nums[i] != largest:
+            Slargest = nums[i]    
+    return Slargest
 
 
+nums = [1,2,4,7,7,5]
+print(Secondlargest(nums))
 
+ 
