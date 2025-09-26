@@ -1274,8 +1274,30 @@
 # Explanation: 10 is the largest element in the array. 
 
 #Brute Force and luckily the optimal too Cheers!
-def LargestElement(nums):
+# def LargestElement(nums):
 
+#     largestelement = nums[0]
+#     n = len(nums)
+#     i = 0
+#     while i < n:
+#         if nums[i] > largestelement:
+#             largestelement = nums[i]
+
+#         i +=1
+#     return largestelement 
+
+# nums =[2,1,5,3,0]
+# print(LargestElement(nums))
+
+
+# Find Second Smallest and Second Largest Element in an array
+# Example 1:
+# Input: [1,2,4,7,7,5]
+# Output: Second Smallest : 2
+# 	Second Largest : 5
+
+
+def Largest(nums):
     largestelement = nums[0]
     n = len(nums)
     i = 0
@@ -1284,10 +1306,23 @@ def LargestElement(nums):
             largestelement = nums[i]
 
         i +=1
-    return largestelement 
+    
+    return largestelement
+def SecondLargest(nums):
+    largestelement = nums[0]
+    n = len(nums)
+    i = 0
+    while i < n:
+        if nums[i] > largestelement:
+            largestelement = nums[i]
 
-nums =[2,1,5,3,0]
-print(LargestElement(nums))
+        i +=1
+    
+    return largestelement
 
+nums=[1,2,4,7,5]
+i = Largest(nums) 
+nums.remove(i)
+print(SecondLargest(nums))
 
 
