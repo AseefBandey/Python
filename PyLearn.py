@@ -1321,13 +1321,13 @@
 # Example 1:
 # Input: N = 5, array[] = {1,2,3,4,5}
 # Output: True.
-def check(nums):
-    n = len(nums)
-    break_count = 0
+# def check(nums):
+#     n = len(nums)
+#     break_count = 0
     
-    for i in range(n):
-        if nums[i] > nums[(i + 1) % n]:
-            break_count += 1
+#     for i in range(n):
+#         if nums[i] > nums[(i + 1) % n]:
+#             break_count += 1
     
-    return break_count <= 1
+#     return break_count <= 1
 
