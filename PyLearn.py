@@ -1242,21 +1242,52 @@
 
 
 # Bubble Sort  recursively
-def bubble_sort_recursive(nums, n=None):
-        n = len(nums)
+# def bubble_sort_recursive(nums, n=None):
+#         n = len(nums)
     
-    if n <= 1:
-        return nums
+#     if n <= 1:
+#         return nums
        
-    swapped = False
-    for i in range(n-1):
-        if nums[i] > nums[i+1]:
-            nums[i], nums[i+1] = nums[i+1], nums[i]
-            swapped = True    
+#     swapped = False
+#     for i in range(n-1):
+#         if nums[i] > nums[i+1]:
+#             nums[i], nums[i+1] = nums[i+1], nums[i]
+#             swapped = True    
     
-    return bubble_sort_recursive(nums, n-1)
+#     return bubble_sort_recursive(nums, n-1)
 
 
-nums = [13,46,24,52,20,9]
-result = bubble_sort_recursive(nums)
-print(result) 
+# nums = [13,46,24,52,20,9]
+# result = bubble_sort_recursive(nums)
+# print(result) 
+
+# #Arrays  A2Z 
+# Find the Largest element in an array
+# xample 1:
+# Input: arr[] = {2,5,1,3,0};
+# Output: 5
+# Explanation: 5 is the largest element in the array. 
+
+# Example2: 
+# Input: arr[] = {8,10,5,7,9};
+# Output: 10
+# Explanation: 10 is the largest element in the array. 
+
+#Brute Force and luckily the optimal too Cheers!
+def LargestElement(nums):
+
+    largestelement = nums[0]
+    n = len(nums)
+    i = 0
+    while i < n:
+        if nums[i] > largestelement:
+            largestelement = nums[i]
+
+        i +=1
+    return largestelement 
+
+nums =[2,1,5,3,0]
+print(LargestElement(nums))
+
+
+
