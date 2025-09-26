@@ -1297,23 +1297,37 @@
 # 	Second Largest : 5
 
 
-def Secondlargest(nums):
-    if len(nums) < 2:
-        return None 
-        
+# def Secondlargest(nums):
+#     if len(nums) < 2:
+#         return None 
+
+#     n = len(nums)
+#     largest = float("-inf")
+#     Slargest = float("-inf")
+#     for i in range(0,n):
+#         if nums[i] > largest:
+#             Slargest = largest
+#             largest = nums[i]
+#         elif nums[i] > Slargest and nums[i] != largest:
+#             Slargest = nums[i]    
+#     return Slargest
+
+
+# nums = [1,2,4,7,7,5]
+# print(Secondlargest(nums))
+
+# Check if an Array is Sorted
+
+# Example 1:
+# Input: N = 5, array[] = {1,2,3,4,5}
+# Output: True.
+def check(nums):
     n = len(nums)
-    largest = float("-inf")
-    Slargest = float("-inf")
-    for i in range(0,n):
-        if nums[i] > largest:
-            Slargest = largest
-            largest = nums[i]
-        elif nums[i] > Slargest and nums[i] != largest:
-            Slargest = nums[i]    
-    return Slargest
+    break_count = 0
+    
+    for i in range(n):
+        if nums[i] > nums[(i + 1) % n]:
+            break_count += 1
+    
+    return break_count <= 1
 
-
-nums = [1,2,4,7,7,5]
-print(Secondlargest(nums))
-
- 
