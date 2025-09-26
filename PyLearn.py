@@ -1297,32 +1297,32 @@
 # 	Second Largest : 5
 
 
-def Largest(nums):
-    largestelement = nums[0]
-    n = len(nums)
-    i = 0
-    while i < n:
-        if nums[i] > largestelement:
-            largestelement = nums[i]
+# def Largest(nums):
+#     largestelement = nums[0]
+#     n = len(nums)
+#     i = 0
+#     while i < n:
+#         if nums[i] > largestelement:
+#             largestelement = nums[i]
 
-        i +=1
+#         i +=1
     
-    return largestelement
-def SecondLargest(nums):
-    largestelement = nums[0]
-    n = len(nums)
-    i = 0
-    while i < n:
-        if nums[i] > largestelement:
-            largestelement = nums[i]
+#     return largestelement
+# def SecondLargest(nums):
+#     largestelement = nums[0]
+#     n = len(nums)
+#     i = 0
+#     while i < n:
+#         if nums[i] > largestelement:
+#             largestelement = nums[i]
 
-        i +=1
+#         i +=1
     
-    return largestelement
+#     return largestelement
 
-nums=[1,2,4,7,5]
-i = Largest(nums) 
-nums.remove(i)
-print(SecondLargest(nums))
+# nums=[1,2,4,7,5]
+# i = Largest(nums) 
+# nums.remove(i)
+# print(SecondLargest(nums))
 
 
