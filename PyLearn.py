@@ -1261,7 +1261,11 @@
 # result = bubble_sort_recursive(nums)
 # print(result) 
 
-# #Arrays  A2Z 
+
+
+                                            # #Arrays  A2Z 
+
+
 # Find the Largest element in an array
 # xample 1:
 # Input: arr[] = {2,5,1,3,0};
@@ -1331,3 +1335,31 @@
     
 #     return break_count <= 1
 
+
+# Remove Duplicates in-place from Sorted Array
+
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        if not nums:
+            return 0
+        
+        i = 0  # Slow pointer
+        
+        # Read Explination to better Understand
+        for j in range(1, len(nums)):  # Fast pointer
+
+            if nums[j] != nums[i]:  #are they unique?
+
+                i += 1  # When we find nums[j] != nums[i], it means: nums[i] = the last unique element we placed, We need to place nums[j] at the NEXT position after i
+
+                nums[i] = nums[j]  # Place unique element there
+        
+        return i + 1
+
+# Test
+solver = Solution()
+nums = [0,0,1,1,1,2,2,3,3,4]
+k = solver.removeDuplicates(nums)
+print(f"New length: {k}")
+print(f"Modified array: {nums[:k]}")
