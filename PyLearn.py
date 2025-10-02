@@ -1380,3 +1380,11 @@ nums = [-1,-100,3,99]
 k = 2
 solution = Solution()
 solution.rotate(nums,k)
+
+
+#optimal:-  
+        n=len(nums)
+        k=k%n # why modulos? , it removes the useless complete rotations and keeps only what actually matters!
+        nums[:] = nums[-k:] + nums[:-k]
+        return nums
+            
