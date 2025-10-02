@@ -1339,27 +1339,44 @@
 # Remove Duplicates in-place from Sorted Array
 
 
+# class Solution(object):
+#     def removeDuplicates(self, nums):
+#         if not nums:
+#             return 0
+        
+#         i = 0  # Slow pointer
+        
+#         # Read Explination to better Understand
+#         for j in range(1, len(nums)):  # Fast pointer
+
+#             if nums[j] != nums[i]:  #are they unique?
+
+#                 i += 1  # When we find nums[j] != nums[i], it means: nums[i] = the last unique element we placed, We need to place nums[j] at the NEXT position after i
+
+#                 nums[i] = nums[j]  # Place unique element there
+        
+#         return i + 1
+
+# # Test
+# solver = Solution()
+# nums = [0,0,1,1,1,2,2,3,3,4]
+# k = solver.removeDuplicates(nums)
+# print(f"New length: {k}")
+# print(f"Modified array: {nums[:k]}")
+
+
 class Solution(object):
-    def removeDuplicates(self, nums):
-        if not nums:
-            return 0
-        
-        i = 0  # Slow pointer
-        
-        # Read Explination to better Understand
-        for j in range(1, len(nums)):  # Fast pointer
+    def rotate(self, nums, k):
+        n = len(nums)
+        k = k % n   # why modulos? , it removes the useless complete rotations and keeps only what actually matters!
+        temp = nums[-k:]    # Slice the list from The k   
+        rest = nums[:-k]    # Slice the list to k
+        nums[:] = temp + rest  # merge the slices
 
-            if nums[j] != nums[i]:  #are they unique?
-
-                i += 1  # When we find nums[j] != nums[i], it means: nums[i] = the last unique element we placed, We need to place nums[j] at the NEXT position after i
-
-                nums[i] = nums[j]  # Place unique element there
-        
-        return i + 1
-
-# Test
-solver = Solution()
-nums = [0,0,1,1,1,2,2,3,3,4]
-k = solver.removeDuplicates(nums)
-print(f"New length: {k}")
-print(f"Modified array: {nums[:k]}")
+        print(nums)
+            
+                
+nums = [-1,-100,3,99]
+k = 2
+solution = Solution()
+solution.rotate(nums,k)
