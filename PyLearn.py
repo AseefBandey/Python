@@ -1388,3 +1388,16 @@
 #         nums[:] = nums[-k:] + nums[:-k]
 #         return nums
             
+
+
+class Solution(object):
+    def missingNumber(self, nums):
+        n = len(nums)
+        # complete_set = set(range(n + 1))  # {0,1,2,3}
+        # nums_set = set(nums)              # {0,1,3}
+        missing = set(range(n + 1)) - set(nums) # {2}
+        return list(missing)[0]           # 2
+
+
+
+
