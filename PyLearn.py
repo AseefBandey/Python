@@ -1365,26 +1365,26 @@
 # print(f"Modified array: {nums[:k]}")
 
 
-class Solution(object):
-    def rotate(self, nums, k):
-        n = len(nums)
-        k = k % n   # why modulos? , it removes the useless complete rotations and keeps only what actually matters!
-        temp = nums[-k:]    # Slice the list from The k   
-        rest = nums[:-k]    # Slice the list to k
-        nums[:] = temp + rest  # merge the slices
+# class Solution(object):
+#     def rotate(self, nums, k):
+#         n = len(nums)
+#         k = k % n   # why modulos? , it removes the useless complete rotations and keeps only what actually matters!
+#         temp = nums[-k:]    # Slice the list from The k   
+#         rest = nums[:-k]    # Slice the list to k
+#         nums[:] = temp + rest  # merge the slices
 
-        print(nums)
+#         print(nums)
             
                 
-nums = [-1,-100,3,99]
-k = 2
-solution = Solution()
-solution.rotate(nums,k)
+# nums = [-1,-100,3,99]
+# k = 2
+# solution = Solution()
+# solution.rotate(nums,k)
 
 
-#optimal:-  
-        n=len(nums)
-        k=k%n # why modulos? , it removes the useless complete rotations and keeps only what actually matters!
-        nums[:] = nums[-k:] + nums[:-k]
-        return nums
+# #optimal:-  
+#         n=len(nums)
+#         k=k%n # why modulos? , it removes the useless complete rotations and keeps only what actually matters!
+#         nums[:] = nums[-k:] + nums[:-k]
+#         return nums
             
