@@ -1390,14 +1390,43 @@
             
 
 
+# class Solution(object):
+#     def missingNumber(self, nums):
+#         n = len(nums)
+#         # complete_set = set(range(n + 1))  # {0,1,2,3}
+#         # nums_set = set(nums)              # {0,1,3}
+#         missing = set(range(n + 1)) - set(nums) # {2}
+#         return list(missing)[0]           # 2
+
+#  Max Consecutive Ones
+
 class Solution(object):
-    def missingNumber(self, nums):
+    def findMaxConsecutiveOnes(self, nums):
+        max_count = 0
+        current_count = 0
+        
+        for num in nums:
+            if num == 1:
+                current_count += 1
+                max_count = max(max_count, current_count)
+            else:
+                current_count = 0  # Reset when we hit 0
+                
+        return max_count
+
+class Solution(object):
+    def singleNumber(self, nums):
+        nums.sort()
         n = len(nums)
-        # complete_set = set(range(n + 1))  # {0,1,2,3}
-        # nums_set = set(nums)              # {0,1,3}
-        missing = set(range(n + 1)) - set(nums) # {2}
-        return list(missing)[0]           # 2
+        i = 0
+        
+        while i < n - 1:     
+            if nums[i] != nums[i+1]:
+                return nums[i]
+            i += 2           
+        
+        return nums[-1]      
+        
 
 
-
-
+        
