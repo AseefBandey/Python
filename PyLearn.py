@@ -1414,18 +1414,18 @@
                 
 #         return max_count
 
-# class Solution(object):
-#     def singleNumber(self, nums):
-#         nums.sort()
-#         n = len(nums)
-#         i = 0
+class Solution(object):
+    def singleNumber(self, nums):
+        nums.sort()
+        n = len(nums)
+        i = 0
         
-#         while i < n - 1:     
-#             if nums[i] != nums[i+1]:
-#                 return nums[i]
-#             i += 2           
+        while i < n - 1:     
+            if nums[i] != nums[i+1]:
+                return nums[i]
+            i += 2           
         
-#         return nums[-1]      
+        return nums[-1]      
         
 
 
