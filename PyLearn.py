@@ -1400,32 +1400,32 @@
 
 #  Max Consecutive Ones
 
-class Solution(object):
-    def findMaxConsecutiveOnes(self, nums):
-        max_count = 0
-        current_count = 0
+# class Solution(object):
+#     def findMaxConsecutiveOnes(self, nums):
+#         max_count = 0
+#         current_count = 0
         
-        for num in nums:
-            if num == 1:
-                current_count += 1
-                max_count = max(max_count, current_count)
-            else:
-                current_count = 0  # Reset when we hit 0
+#         for num in nums:
+#             if num == 1:
+#                 current_count += 1
+#                 max_count = max(max_count, current_count)
+#             else:
+#                 current_count = 0  # Reset when we hit 0
                 
-        return max_count
+#         return max_count
 
-class Solution(object):
-    def singleNumber(self, nums):
-        nums.sort()
-        n = len(nums)
-        i = 0
+# class Solution(object):
+#     def singleNumber(self, nums):
+#         nums.sort()
+#         n = len(nums)
+#         i = 0
         
-        while i < n - 1:     
-            if nums[i] != nums[i+1]:
-                return nums[i]
-            i += 2           
+#         while i < n - 1:     
+#             if nums[i] != nums[i+1]:
+#                 return nums[i]
+#             i += 2           
         
-        return nums[-1]      
+#         return nums[-1]      
         
 
 
