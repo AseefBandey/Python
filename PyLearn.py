@@ -1454,3 +1454,27 @@
 #                 if nums[i] + nums[j] == target:
 #                     return [i, j]  
 #         return []  
+
+# Sort colors
+
+
+#Not Optimal O(n2); --
+class Solution(object):
+    def sortColors(self, nums):
+        n = len(nums)
+        count = [0]*3
+        
+        # Counting occurrences of 0, 1, 2
+        for num in nums:
+            count[num] += 1
+        
+        # Overwrite nums using the counters
+        idx = 0
+        for i in range(3):
+            for j in range(count[i]):
+                nums[idx] = i
+                idx += 1
+
+
+
+
