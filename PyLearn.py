@@ -1491,5 +1491,32 @@
 #         nums[:R] = [0] * R
 #         nums[R:R+W] = [1] * W
 #         nums[R+W:] = [2] * B
+ 
 
+class Solution(object):
+   def majorityElement(self, nums):
+    count = {}  # Empty dictionary
+    
+    # Count each number
+    for num in nums:
+        if num in count:
+            count[num] += 1      # Increment if exists
+        else:
+            count[num] = 1       # Initialize if new
+    
+    # Find number with highest count
+    max_count = 0
+    result = nums[0]
+    
+    for number, frequency in count.items():
+        if frequency > max_count:
+            max_count = frequency
+            result = number
+    
+    return result
 
+    
+nums = [2,2,1,1,1,2,2]
+solution = Solution()
+result = solution.majorityElement(nums)
+print(result)
