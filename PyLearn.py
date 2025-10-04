@@ -1476,5 +1476,20 @@ class Solution(object):
                 idx += 1
 
 
+# Optimal :- 
 
+class Solution(object):
+    def sortColors(self, nums):
+        count = [0]*3
+        
+        # Counting occurrences of 0, 1, 2
+        for num in nums:
+            count[num] += 1
 
+        R,W,B = count # Unpacking
+
+        nums[:R] = [0] * R
+        nums[R:R+W] = [1] * W
+        nums[R+W:] = [2] * B
+
+        
