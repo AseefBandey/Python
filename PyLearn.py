@@ -1522,14 +1522,25 @@
 # print(result)
 
 class Solution(object):
-    def maxSubArray(self, nums):
-        current_sum = max_sum = nums[0]
+    def maxProfit(self, prices):
+        min_price = float('inf')
+        max_profit = 0
         
-        for num in nums[1:]:
-            current_sum = max(num, current_sum + num)
-            max_sum = max(max_sum, current_sum)
-        
-        return max_sum
+        for price in prices:
+            if price < min_price:
+                min_price = price  # update min price so far
+            else:
+                profit = price - min_price
+                if profit > max_profit:
+                    max_profit = profit  # update max profit
+          
+        return max_profit
 
+
+
+nums = [7,1,5,3,6,4]
+solution = Solution()
+result = solution.maxProfit(nums)
+print(result)
 
 
