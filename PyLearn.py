@@ -1521,26 +1521,26 @@
 # result = solution.majorityElement(nums)
 # print(result)
 
-class Solution(object):
-    def maxProfit(self, prices):
-        min_price = float('inf')
-        max_profit = 0
+# class Solution(object):
+#     def maxProfit(self, prices):
+#         min_price = float('inf')
+#         max_profit = 0
         
-        for price in prices:
-            if price < min_price:
-                min_price = price  # update min price so far
-            else:
-                profit = price - min_price
-                if profit > max_profit:
-                    max_profit = profit  # update max profit
+#         for price in prices:
+#             if price < min_price:
+#                 min_price = price  # update min price so far
+#             else:
+#                 profit = price - min_price
+#                 if profit > max_profit:
+#                     max_profit = profit  # update max profit
           
-        return max_profit
+#         return max_profit
 
 
 
-nums = [7,1,5,3,6,4]
-solution = Solution()
-result = solution.maxProfit(nums)
-print(result)
+# nums = [7,1,5,3,6,4]
+# solution = Solution()
+# result = solution.maxProfit(nums)
+# print(result)
 
 
