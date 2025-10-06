@@ -1543,4 +1543,29 @@
 # result = solution.maxProfit(nums)
 # print(result)
 
+class Solution(object):
+    def rearrangeArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        # the index for the array will be categorized in odd and even .
+        array = [0] * len(nums)
+        even_idx, odd_idx = 0, 1
+
+        for num in nums:
+            if num > 0:
+                array[even_idx] = num
+                even_idx += 2
+            else:
+                array[odd_idx] = num
+                odd_idx += 2
+
+        return array
+    
+nums = [3,1,-2,-5,2,-4]
+solution = Solution()
+result = solution.rearrangeArray(nums)
+print(result)
+
 
