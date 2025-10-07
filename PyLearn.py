@@ -1569,3 +1569,32 @@
 # print(result)
 
 
+# find Cpnsective elemts
+# Input: [100, 200, 1, 3, 2, 4]
+
+class Solution(object):
+    def longestConsecutive(self, nums):
+        if not nums:  # empty list check
+            return 0
+        
+        nums.sort()
+        max_count = 1
+        count = 1
+        
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i-1]:  # skip duplicates
+                continue
+            elif nums[i] == nums[i-1] + 1:  # consecutive
+                count += 1
+            else:  # sequence broken
+                max_count = max(max_count, count)
+                count = 1
+                
+        max_count = max(max_count, count)
+        return max_count
+
+
+nums = [100, 200, 1, 3, 2, 4]
+solution = Solution()
+result = solution.longestConsecutive(nums)
+print(result)               
