@@ -1572,29 +1572,68 @@
 # find Cpnsective elemts
 # Input: [100, 200, 1, 3, 2, 4]
 
-class Solution(object):
-    def longestConsecutive(self, nums):
-        if not nums:  # empty list check
-            return 0
+# class Solution(object):
+#     def longestConsecutive(self, nums):
+#         if not nums:  # empty list check
+#             return 0
         
-        nums.sort()
-        max_count = 1
-        count = 1
+#         nums.sort()
+#         max_count = 1
+#         count = 1
         
-        for i in range(1, len(nums)):
-            if nums[i] == nums[i-1]:  # skip duplicates
-                continue
-            elif nums[i] == nums[i-1] + 1:  # consecutive
-                count += 1
-            else:  # sequence broken
-                max_count = max(max_count, count)
-                count = 1
+#         for i in range(1, len(nums)):
+#             if nums[i] == nums[i-1]:  # skip duplicates
+#                 continue
+#             elif nums[i] == nums[i-1] + 1:  # consecutive
+#                 count += 1
+#             else:  # sequence broken
+#                 max_count = max(max_count, count)
+#                 count = 1
                 
-        max_count = max(max_count, count)
-        return max_count
+#         max_count = max(max_count, count)
+#         return max_count
 
 
-nums = [100, 200, 1, 3, 2, 4]
-solution = Solution()
-result = solution.longestConsecutive(nums)
-print(result)               
+# nums = [100, 200, 1, 3, 2, 4]
+# solution = Solution()
+# result = solution.longestConsecutive(nums)
+# print(result)               '''
+
+
+# Set Matrix Zeroes
+
+class Solution(object):
+    def setZeroes(self, matrix):
+        if not matrix or not matrix[0]:
+            return
+        m, n = len(matrix), len(matrix[0])
+        first_row_zero = any(matrix[0][j] == 0 for j in range(n))
+        first_col_zero = any(matrix[i][0] == 0 for i in range(m))
+
+        # Mark zeros in first row and column
+        for i in range(1, m):
+            for j in range(1, n):
+                if matrix[i][j] == 0:
+                    matrix[i][0] = 0
+                    matrix[0][j] = 0
+
+        # Zero rows based on marks
+        for i in range(1, m):
+            if matrix[i][0] == 0:
+                for j in range(1, n):
+                    matrix[i][j] = 0
+
+        # Zero columns based on marks
+        for j in range(1, n):
+            if matrix[0][j] == 0:
+                for i in range(1, m):
+                    matrix[i][j] = 0
+
+        # Zero first row and first column if needed
+        if first_row_zero:
+            for j in range(n):
+                matrix[0][j] = 0
+        if first_col_zero:
+            for i in range(m):
+                matrix[i][0] = 0
+
