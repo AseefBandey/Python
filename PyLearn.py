@@ -1652,15 +1652,17 @@
 
 # coloum adddition one at a time 
 
-matrix = [
- [1, 2, 3],
- [4, 5, 6],
- [7, 8, 9]
-]
-sum= 0
-for i in range(len(matrix)):
-    for j in range(len(matrix[0])):
-        sum += matrix[j][i]
+# matrix = [
+#  [1, 2, 3],
+#  [4, 5, 6],
+#  [7, 8, 9]
+# ]
+# sum= 0
+# for i in range(len(matrix)):
+#     for j in range(len(matrix[0])):
+#         sum += matrix[j][i]
         
-    print (sum)
-    sum = 0
+#     print (sum)
+#     sum = 0
+
+# Challenge: find max value in each row or column.
