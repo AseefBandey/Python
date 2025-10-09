@@ -1708,3 +1708,28 @@
 #             for j in range(len(matrix[0])):
 #                 if i in row or j in col:   # see here only i  will at first postion for that row (i,j) here i is at first only for this row i.e (2,1) 
 #                     matrix[i][j] = 0
+
+
+matrix =[[5,1,9,11],
+         [2,4,8,10],
+         [13,3,6,7],
+         [15,14,12,16]]
+
+n,m = len(matrix),len(matrix[0])
+
+for i in range(n):
+    for j in range(i+1, m):  # upper triangle only
+        matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+
+for i in range(n):
+    for j in range(m):
+        if j == 0:
+            matrix[i][j],matrix[i][-1] = matrix[i][-1] , matrix[i][j]
+    print(matrix)
+
+
+
+
+
+print(matrix)
+
