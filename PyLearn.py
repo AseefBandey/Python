@@ -1665,26 +1665,46 @@
 #     print (sum)
 #     sum = 0
 
-matrix = [
- [1, 2, 3],
- [4, 5, 6],
- [7, 8, 9]
-]
+# matrix = [
+#  [1, 2, 3],
+#  [4, 5, 6],
+#  [7, 8, 9]
+# ]
 
-# Find max in each row
-for i in range(len(matrix)):
-    row_max = matrix[i][0]  # start with first element in the row
-    for j in range(len(matrix[0])):
-        if matrix[i][j] > row_max:
-            row_max = matrix[i][j]
-    print(f"Max Value in Row {i}: {row_max}")
+# # Find max in each row
+# for i in range(len(matrix)):
+#     row_max = matrix[i][0]  # start with first element in the row
+#     for j in range(len(matrix[0])):
+#         if matrix[i][j] > row_max:
+#             row_max = matrix[i][j]
+#     print(f"Max Value in Row {i}: {row_max}")
 
-print()  # just to separate row and column output
+# print()  # just to separate row and column output
 
-# Find max in each column
-for m in range(len(matrix[0])):
-    col_max = matrix[0][m]  # start with first element in the column
-    for n in range(len(matrix)):
-        if matrix[n][m] > col_max:
-            col_max = matrix[n][m]
-    print(f"Max Value in Col {m}: {col_max}")
+# # Find max in each column
+# for m in range(len(matrix[0])):
+#     col_max = matrix[0][m]  # start with first element in the column
+#     for n in range(len(matrix)):
+#         if matrix[n][m] > col_max:
+#             col_max = matrix[n][m]
+#     print(f"Max Value in Col {m}: {col_max}")
+
+# Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+
+class Solution(object):
+    def setZeroes(self, matrix):
+        row = set()
+        col = set()
+        
+        # Step 1: Find all rows and columns with a zero
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if matrix[i][j] == 0:
+                    row.add(i)
+                    col.add(j)
+        
+        # Step 2: Zero out the rows and columns
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if i in row or j in col:   # see here only i  will at first postion for that row (i,j) here i is at first only for this row i.e (2,1) 
+                    matrix[i][j] = 0
