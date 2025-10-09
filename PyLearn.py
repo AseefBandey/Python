@@ -1691,20 +1691,20 @@
 
 # Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
 
-class Solution(object):
-    def setZeroes(self, matrix):
-        row = set()
-        col = set()
+# class Solution(object):
+#     def setZeroes(self, matrix):
+#         row = set()
+#         col = set()
         
-        # Step 1: Find all rows and columns with a zero
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                if matrix[i][j] == 0:
-                    row.add(i)
-                    col.add(j)
+#         # Step 1: Find all rows and columns with a zero
+#         for i in range(len(matrix)):
+#             for j in range(len(matrix[0])):
+#                 if matrix[i][j] == 0:
+#                     row.add(i)
+#                     col.add(j)
         
-        # Step 2: Zero out the rows and columns
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                if i in row or j in col:   # see here only i  will at first postion for that row (i,j) here i is at first only for this row i.e (2,1) 
-                    matrix[i][j] = 0
+#         # Step 2: Zero out the rows and columns
+#         for i in range(len(matrix)):
+#             for j in range(len(matrix[0])):
+#                 if i in row or j in col:   # see here only i  will at first postion for that row (i,j) here i is at first only for this row i.e (2,1) 
+#                     matrix[i][j] = 0
