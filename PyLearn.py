@@ -1665,4 +1665,26 @@
 #     print (sum)
 #     sum = 0
 
-# Challenge: find max value in each row or column.
+matrix = [
+ [1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]
+]
+
+# Find max in each row
+for i in range(len(matrix)):
+    row_max = matrix[i][0]  # start with first element in the row
+    for j in range(len(matrix[0])):
+        if matrix[i][j] > row_max:
+            row_max = matrix[i][j]
+    print(f"Max Value in Row {i}: {row_max}")
+
+print()  # just to separate row and column output
+
+# Find max in each column
+for m in range(len(matrix[0])):
+    col_max = matrix[0][m]  # start with first element in the column
+    for n in range(len(matrix)):
+        if matrix[n][m] > col_max:
+            col_max = matrix[n][m]
+    print(f"Max Value in Col {m}: {col_max}")
