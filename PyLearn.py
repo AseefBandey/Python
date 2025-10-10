@@ -1721,8 +1721,8 @@
 #     for j in range(i+1, m):  # upper triangle only
 #         matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 
-for row in matrix:
-            row.reverse()
+# for row in matrix:
+#             row.reverse()
 
-print(matrix)
+# print(matrix)
 
