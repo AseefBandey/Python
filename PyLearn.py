@@ -1771,13 +1771,13 @@
 #                 p_count = max(c_count,p_count)
 #             else : c_count = 0
 #         return max(p_count,c_count)
- nums.sort()
-        n = len(nums)
-        i = 0
+#  nums.sort()
+#         n = len(nums)
+#         i = 0
         
-        while i < n - 1:     
-            if nums[i] != nums[i+1]:
-                return nums[i]
-            i += 2           
+#         while i < n - 1:     
+#             if nums[i] != nums[i+1]:
+#                 return nums[i]
+#             i += 2           
         
-        return nums[-1]
+#         return nums[-1]
