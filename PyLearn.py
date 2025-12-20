@@ -1783,17 +1783,32 @@
 #         return nums[-1]
 
 
-class Solution(object):
-    def majorityElement(self, nums):
-        count = 0
-        candidate = None
+# class Solution(object):
+#     def majorityElement(self, nums):
+#         count = 0
+#         candidate = None
 
-        for num in nums:
-            if count == 0:
-                candidate = num
-            count += 1 if num == candidate else -1             
+#         for num in nums:
+#             if count == 0:
+#                 candidate = num
+#             count += 1 if num == candidate else -1             
 
-        return candidate
+#         return candidate
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        anagrams = {}
 
+        for word in strs:
+            counts = [0] * 26
 
+            for char in word:
+                counts[ord(char) - ord('a')] += 1
 
+            key = tuple(counts)
+
+            if key not in anagrams:
+                anagrams[key] = [word]
+            else:
+                anagrams[key].append(word)
+
+        return list(anagrams.values())
