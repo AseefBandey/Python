@@ -1836,3 +1836,41 @@
 #                 if len(res) == k:
 #                     return res
 
+class Codec:
+    def encode(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        encoded = []
+        for s in strs:
+            # format: "<length>#<string>"
+            encoded.append(str(len(s)) + "#" + s)
+        # join all parts into one big string
+        return "".join(encoded)
+
+    def decode(self, s):
+        """
+        :type s: str
+        :rtype: List[str]
+        """
+        res = []
+        i = 0
+
+        while i < len(s):
+            # 1) read length until '#'
+            j = i
+            while s[j] != "#":
+                j += 1
+            length = int(s[i:j])  # number before '#'
+
+            # 2) read `length` characters after '#'
+            j += 1  # move past '#'
+            word = s[j : j + length]
+            res.append(word)
+
+            # 3) move pointer to next encoded block
+            i = j + length
+
+        return res
+    
