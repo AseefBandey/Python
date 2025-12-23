@@ -1932,3 +1932,22 @@
 #                 squares[(r // 3, c // 3)].add(board[r][c])
 
 #         return True
+
+nums = [100,4,200,1,3,2]
+hashset = set(nums)
+longest = 0
+
+for num in hashset:
+    # Only check if this is the start of a sequence
+    if num - 1 not in hashset:
+        current = num
+        current_length = 1
+        
+        # Count consecutive numbers
+        while current + 1 in hashset:
+            current += 1
+            current_length += 1
+            
+        longest = max(longest, current_length)
+
+return longest
